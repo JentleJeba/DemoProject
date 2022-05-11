@@ -1,0 +1,55 @@
+
+
+
+
+
+public class extends webDriverTestCase{
+
+@Test
+public void a(){
+     WebElement searchbox=webDriver.findElement(By.id("search-input"));
+      WebElement searchbutton=webDriver.findElement(By.id("search-button"));
+      assertTrue(searchbox.isDisplayed();
+      assertTrue (searchbutton.isDisplayed();
+}
+
+@Test
+public void b(){
+webDriver.findelement(By.id("search-button").click();
+String err=webdriver.findElement(By.id("error-empty-query");
+assertTrue(err.contains("Provide some query");
+}
+
+@Test
+public void c() throws InterruptedException{
+webDriver.findElement(By.id("search-input")).sendKeys("isla");
+webDriver.findElement(By.id("search-button")).click();
+Thread.Sleep(3000);
+int listsize=webDriver.findElement(By.xpath("");
+assertTrue(listsize>1);
+}
+
+@Test
+public void d() throws InterruptedException{
+webDriver.findElement(By.id("search-input")).sendKeys("castle");
+webDriver.findElement(By.id("search-button")).click();
+Thread.Sleep(3000);
+String noresults=webDriver.findElement(By.xpath("");
+assertTrue(noresults.contains("No results");
+}
+
+public void e() throws InterruptedException{
+webDriver.findElement(By.id("search-input")).sendKeys("port");
+webDriver.findElement(By.id("search-button")).click();
+Thread.Sleep(3000);
+int list=webDriver.findElement(By.xpath("")
+assertTrue(listsize=1);
+}
+
+
+
+
+
+
+
+  
