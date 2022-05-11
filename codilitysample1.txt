@@ -1,0 +1,40 @@
+import org.junit.Test;
+import  org.openqa.selenium.*
+import org.junit.Assert.assertTrue;
+import org.junit.Assert.assertEquals;
+
+
+public class tc1{
+
+List<WebElement> itemsList=webDriver.findElements(By.xpath("
+
+int  listsize=itemsList.size();
+assertTrue(listsize==10);
+
+
+
+
+//forgotpwd
+WebElement forgotpwdLink=webDriver.findElement(By.xpath("/html/body/div/div[1]/div[1]/div[2]/form/div[1]/div[3]/div[2]/span/a/u"));
+assertTrue=(forgotpwdLink.isDisplayed();
+}
+
+@Test
+public void tc2(){
+webDriver.findElement(By.id("login1")).sendKeys("User1");
+webDriver.findElement(By.id("password")).sendKeys("Pass1");
+webDriver.findElement(By.name("proceed")).click();
+Strimg err=webDriver.findElement(By.id("div_login_error")).getText();
+assertTrue(err.contains("Temporary Issue. Please try again later. [#5002]"));
+assertEquals(expErr,err);
+
+@Test
+	public void tc3() throws InterruptedException {
+		webDriver.findElement(By.xpath("//*[@id=\"searchbox\"]/button")).click();
+		Thread.sleep(3000);
+		String err=driver.findElement(By.xpath("//*[@id=\"center_column\"]/p")).getText();
+		System.out.println("the error is "+err);
+		assertTrue(err.contains("Please enter a search keyword"));
+	}
+
+
